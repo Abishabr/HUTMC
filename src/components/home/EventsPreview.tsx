@@ -28,70 +28,77 @@ const upcomingEvents = [
 
 export const EventsPreview = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+    <section className="py-32 lg:py-40 bg-background relative">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Left Column - Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
+            className="lg:col-span-5"
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-4">
-              Upcoming
-            </p>
-            <h2 className="text-section-title text-foreground mb-6">
-              Events & <br />
-              <span className="text-gold-gradient">Performances</span>
-            </h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-8 max-w-md">
-              Join us for captivating performances, cultural celebrations, and artistic
-              showcases throughout the academic year.
-            </p>
-            <Link
-              to="/events"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-body rounded-sm hover:bg-secondary/80 transition-colors duration-300"
-            >
-              View All Events
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+            <div className="lg:sticky lg:top-32">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-8 h-px bg-primary" />
+                <p className="text-eyebrow">Upcoming</p>
+              </div>
+              
+              <h2 className="text-section-title text-foreground mb-6">
+                Events &
+                <br />
+                <span className="text-gold-gradient">Performances</span>
+              </h2>
+              
+              <p className="font-body text-muted-foreground leading-relaxed mb-10 max-w-md">
+                Join us for captivating performances, cultural celebrations, and artistic
+                showcases throughout the academic year.
+              </p>
+              
+              <Link to="/events" className="btn-secondary group">
+                View All Events
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
           </motion.div>
 
           {/* Right Column - Event List */}
-          <div className="space-y-4">
+          <div className="lg:col-span-7 space-y-4">
             {upcomingEvents.map((event, index) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <Link
                   to={`/events/${event.id}`}
-                  className="group block p-6 bg-card rounded-sm border border-border/50 hover:border-primary/30 transition-all duration-300 card-hover"
+                  className="group block p-6 lg:p-8 card-elevated"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <span className="inline-block font-body text-xs uppercase tracking-wider text-primary mb-2">
+                  <div className="flex items-start justify-between gap-6">
+                    <div className="flex-1">
+                      <span className="inline-block text-xs uppercase tracking-widest text-primary font-medium mb-3">
                         {event.type}
                       </span>
-                      <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      <h3 className="font-display text-xl lg:text-2xl text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                         {event.title}
                       </h3>
-                      <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
-                        <span className="inline-flex items-center gap-1.5 font-body text-sm">
+                      <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
+                        <span className="inline-flex items-center gap-2 font-body text-sm">
                           <Calendar size={14} className="text-primary/60" />
                           {event.date}
                         </span>
-                        <span className="inline-flex items-center gap-1.5 font-body text-sm">
+                        <span className="inline-flex items-center gap-2 font-body text-sm">
                           <MapPin size={14} className="text-primary/60" />
                           {event.location}
                         </span>
                       </div>
                     </div>
-                    <ArrowRight size={20} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 mt-1" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full border border-border/50 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+                      <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-300" />
+                    </div>
                   </div>
                 </Link>
               </motion.div>
