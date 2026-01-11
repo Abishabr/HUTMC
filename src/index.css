@@ -2,95 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* HUMTC Theatre-Inspired Design System */
+    
+    /* Primary Background - Deep Charcoal Stage */
+    --background: 220 20% 6%;
+    --foreground: 45 10% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards - Slightly Elevated Surfaces */
+    --card: 220 18% 10%;
+    --card-foreground: 45 10% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover/Overlay Surfaces */
+    --popover: 220 18% 12%;
+    --popover-foreground: 45 10% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Warm Theatre Gold */
+    --primary: 42 75% 50%;
+    --primary-foreground: 220 20% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Muted Stone */
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 45 8% 80%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Elements */
+    --muted: 220 15% 14%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Soft Gold Glow */
+    --accent: 42 60% 45%;
+    --accent-foreground: 220 20% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive States */
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 45 10% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 42 75% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Properties for HUMTC */
+    --gold: 42 75% 50%;
+    --gold-muted: 42 45% 35%;
+    --gold-bright: 42 85% 60%;
+    --charcoal-deep: 220 20% 4%;
+    --charcoal: 220 20% 8%;
+    --charcoal-light: 220 18% 14%;
+    --stone: 30 8% 75%;
+    --stone-dark: 30 6% 45%;
+    --cream: 45 20% 95%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Typography Scale */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows - Soft Stage Lighting */
+    --shadow-sm: 0 2px 8px -2px hsl(220 20% 0% / 0.4);
+    --shadow-md: 0 8px 24px -8px hsl(220 20% 0% / 0.5);
+    --shadow-lg: 0 16px 48px -16px hsl(220 20% 0% / 0.6);
+    --shadow-gold: 0 4px 20px -4px hsl(42 75% 50% / 0.25);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 45 10% 85%;
+    --sidebar-primary: 42 75% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 45 10% 85%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 42 75% 50%;
   }
 }
 
@@ -99,7 +88,149 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  /* Selection Color */
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Hero Typography */
+  .text-hero {
+    font-family: var(--font-display);
+    @apply text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[1.1];
+  }
+
+  .text-section-title {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight;
+  }
+
+  .text-card-title {
+    font-family: var(--font-display);
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  /* Gold Gradient Text */
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--gold-bright)) 0%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--gold-muted)) 100%
+    );
+  }
+
+  /* Divider Line with Gold Accent */
+  .divider-gold {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--gold) / 0.4) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Gold Border Glow */
+  .border-gold-glow {
+    @apply border border-transparent;
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent 50%) border-box;
+  }
+
+  /* Stage Spotlight Effect */
+  .spotlight {
+    position: relative;
+  }
+
+  .spotlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at center top,
+      hsl(var(--gold) / 0.08) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+
+  /* Image Frame */
+  .image-frame {
+    @apply relative overflow-hidden;
+  }
+
+  .image-frame::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.5);
+  }
+}
+
+@layer utilities {
+  /* Fade animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Stagger children animation delay */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
 }
