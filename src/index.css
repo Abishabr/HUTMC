@@ -4,67 +4,93 @@
 
 @layer base {
   :root {
-    /* HUMTC Theatre-Inspired Design System */
+    /* Modern Vibrant Design System */
     
-    /* Primary Background - Deep Charcoal Stage */
-    --background: 220 20% 6%;
-    --foreground: 45 10% 92%;
+    /* Primary Background - Deep Rich Black */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
 
-    /* Cards - Slightly Elevated Surfaces */
-    --card: 220 18% 10%;
-    --card-foreground: 45 10% 92%;
+    /* Cards - Elevated Glass Surfaces */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
 
     /* Popover/Overlay Surfaces */
-    --popover: 220 18% 12%;
-    --popover-foreground: 45 10% 92%;
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary - Warm Theatre Gold */
-    --primary: 42 75% 50%;
-    --primary-foreground: 220 20% 6%;
+    /* Primary - Vibrant Purple */
+    --primary: 280 100% 70%;
+    --primary-foreground: 240 10% 4%;
 
-    /* Secondary - Muted Stone */
-    --secondary: 220 12% 18%;
-    --secondary-foreground: 45 8% 80%;
+    /* Secondary - Deep Violet */
+    --secondary: 260 80% 20%;
+    --secondary-foreground: 0 0% 95%;
 
     /* Muted Elements */
-    --muted: 220 15% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 240 10% 14%;
+    --muted-foreground: 240 5% 55%;
 
-    /* Accent - Soft Gold Glow */
-    --accent: 42 60% 45%;
-    --accent-foreground: 220 20% 6%;
+    /* Accent - Electric Cyan */
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 10% 4%;
 
     /* Destructive States */
-    --destructive: 0 65% 45%;
-    --destructive-foreground: 45 10% 95%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
 
     /* Borders & Inputs */
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 42 75% 50%;
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 280 100% 70%;
 
-    --radius: 0.375rem;
+    --radius: 0.75rem;
 
-    /* Custom Properties for HUMTC */
-    --gold: 42 75% 50%;
-    --gold-muted: 42 45% 35%;
-    --gold-bright: 42 85% 60%;
-    --charcoal-deep: 220 20% 4%;
-    --charcoal: 220 20% 8%;
-    --charcoal-light: 220 18% 14%;
-    --stone: 30 8% 75%;
-    --stone-dark: 30 6% 45%;
+    /* Modern Color Palette */
+    --violet: 280 100% 70%;
+    --violet-muted: 280 60% 45%;
+    --violet-bright: 280 100% 80%;
+    
+    --cyan: 180 100% 50%;
+    --cyan-muted: 180 60% 35%;
+    --cyan-bright: 180 100% 65%;
+    
+    --rose: 340 90% 65%;
+    --rose-muted: 340 60% 45%;
+    --rose-bright: 340 100% 75%;
+    
+    --amber: 38 95% 55%;
+    --amber-muted: 38 70% 40%;
+    --amber-bright: 38 100% 65%;
+    
+    --emerald: 160 85% 45%;
+    --emerald-muted: 160 60% 35%;
+    --emerald-bright: 160 90% 55%;
+
+    /* Legacy Gold for backwards compatibility */
+    --gold: 38 95% 55%;
+    --gold-muted: 38 70% 40%;
+    --gold-bright: 38 100% 65%;
+    
+    --charcoal-deep: 240 10% 3%;
+    --charcoal: 240 10% 6%;
+    --charcoal-light: 240 10% 12%;
+    --stone: 240 5% 75%;
+    --stone-dark: 240 5% 45%;
     --cream: 45 20% 95%;
 
     /* Typography Scale */
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    /* Shadows - Soft Stage Lighting */
-    --shadow-sm: 0 2px 8px -2px hsl(220 20% 0% / 0.4);
-    --shadow-md: 0 8px 24px -8px hsl(220 20% 0% / 0.5);
-    --shadow-lg: 0 16px 48px -16px hsl(220 20% 0% / 0.6);
-    --shadow-gold: 0 4px 20px -4px hsl(42 75% 50% / 0.25);
+    /* Modern Shadows with Color */
+    --shadow-sm: 0 2px 8px -2px hsl(240 10% 0% / 0.5);
+    --shadow-md: 0 8px 24px -8px hsl(240 10% 0% / 0.6);
+    --shadow-lg: 0 16px 48px -16px hsl(240 10% 0% / 0.7);
+    --shadow-glow: 0 4px 30px -4px hsl(280 100% 70% / 0.35);
+    --shadow-cyan: 0 4px 30px -4px hsl(180 100% 50% / 0.35);
+    --shadow-rose: 0 4px 30px -4px hsl(340 90% 65% / 0.35);
+    --shadow-amber: 0 4px 30px -4px hsl(38 95% 55% / 0.35);
+    --shadow-gold: 0 4px 20px -4px hsl(38 95% 55% / 0.25);
 
     /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,14 +98,14 @@
     --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Sidebar */
-    --sidebar-background: 220 18% 8%;
-    --sidebar-foreground: 45 10% 85%;
-    --sidebar-primary: 42 75% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 14%;
-    --sidebar-accent-foreground: 45 10% 85%;
-    --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 42 75% 50%;
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 280 100% 70%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 240 10% 15%;
+    --sidebar-ring: 280 100% 70%;
   }
 }
 
@@ -125,46 +151,109 @@
     @apply text-xl md:text-2xl font-medium;
   }
 
-  /* Gold Gradient Text */
+  /* Multi-color Gradient Texts */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--violet-bright)) 0%,
+      hsl(var(--rose)) 50%,
+      hsl(var(--amber)) 100%
+    );
+  }
+
+  .text-gradient-cool {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--cyan-bright)) 0%,
+      hsl(var(--violet)) 50%,
+      hsl(var(--rose)) 100%
+    );
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--amber)) 0%,
+      hsl(var(--rose)) 50%,
+      hsl(var(--violet-bright)) 100%
+    );
+  }
+
+  /* Legacy Gold Gradient for backwards compatibility */
   .text-gold-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
       135deg,
-      hsl(var(--gold-bright)) 0%,
-      hsl(var(--gold)) 50%,
-      hsl(var(--gold-muted)) 100%
+      hsl(var(--violet-bright)) 0%,
+      hsl(var(--rose)) 50%,
+      hsl(var(--amber)) 100%
     );
   }
 
-  /* Divider Line with Gold Accent */
+  /* Modern Divider with Gradient */
+  .divider-gradient {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--cyan) / 0.5) 25%,
+      hsl(var(--violet) / 0.5) 50%,
+      hsl(var(--rose) / 0.5) 75%,
+      transparent 100%
+    );
+  }
+
   .divider-gold {
     @apply h-px w-full;
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(var(--gold) / 0.4) 50%,
+      hsl(var(--violet) / 0.5) 25%,
+      hsl(var(--rose) / 0.5) 50%,
+      hsl(var(--amber) / 0.5) 75%,
       transparent 100%
     );
   }
 
   /* Card Hover Effects */
   .card-hover {
-    @apply transition-all duration-300;
+    @apply transition-all duration-500;
   }
 
   .card-hover:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-lg);
+    @apply -translate-y-2;
+    box-shadow: 0 25px 50px -12px hsl(var(--violet) / 0.25);
   }
 
-  /* Gold Border Glow */
+  /* Gradient Border Glow */
+  .border-gradient-glow {
+    position: relative;
+    @apply border-0;
+  }
+
+  .border-gradient-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--violet)), hsl(var(--rose)));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
   .border-gold-glow {
     @apply border border-transparent;
     background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--gold) / 0.3), transparent 50%) border-box;
+                linear-gradient(135deg, hsl(var(--violet) / 0.5), hsl(var(--rose) / 0.3), transparent 60%) border-box;
   }
 
-  /* Stage Spotlight Effect */
+  /* Modern Spotlight Effect */
   .spotlight {
     position: relative;
   }
@@ -179,21 +268,115 @@
     height: 100%;
     background: radial-gradient(
       ellipse at center top,
-      hsl(var(--gold) / 0.08) 0%,
+      hsl(var(--violet) / 0.15) 0%,
+      hsl(var(--rose) / 0.05) 30%,
       transparent 60%
     );
     pointer-events: none;
   }
 
+  /* Multi-color Glow Background */
+  .glow-background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(ellipse, hsl(var(--violet) / 0.2) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  .glow-background::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(ellipse, hsl(var(--cyan) / 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
   /* Image Frame */
   .image-frame {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden rounded-lg;
   }
 
   .image-frame::after {
     content: '';
     @apply absolute inset-0 pointer-events-none;
     box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.5);
+    border-radius: inherit;
+  }
+
+  /* Gradient Button */
+  .btn-gradient {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(var(--violet)) 0%, hsl(var(--rose)) 100%);
+  }
+
+  .btn-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--rose)) 0%, hsl(var(--amber)) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-gradient:hover::before {
+    opacity: 1;
+  }
+
+  .btn-gradient > span {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Glass Card */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Animated Gradient Border */
+  @keyframes gradient-rotate {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+  }
+
+  .animated-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .animated-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--cyan)),
+      hsl(var(--violet)),
+      hsl(var(--rose)),
+      hsl(var(--amber)),
+      hsl(var(--cyan))
+    );
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 }
 
@@ -227,10 +410,58 @@
     }
   }
 
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--violet) / 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  /* Pulse Glow */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--violet) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--violet) / 0.5), 0 0 60px hsl(var(--rose) / 0.3);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
   /* Stagger children animation delay */
   .stagger-1 { animation-delay: 0.1s; }
   .stagger-2 { animation-delay: 0.2s; }
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
   .stagger-5 { animation-delay: 0.5s; }
+
+  /* Color utilities for the new palette */
+  .text-violet { color: hsl(var(--violet)); }
+  .text-cyan { color: hsl(var(--cyan)); }
+  .text-rose { color: hsl(var(--rose)); }
+  .text-amber { color: hsl(var(--amber)); }
+  .text-emerald { color: hsl(var(--emerald)); }
+
+  .bg-violet { background-color: hsl(var(--violet)); }
+  .bg-cyan { background-color: hsl(var(--cyan)); }
+  .bg-rose { background-color: hsl(var(--rose)); }
+  .bg-amber { background-color: hsl(var(--amber)); }
+  .bg-emerald { background-color: hsl(var(--emerald)); }
 }
