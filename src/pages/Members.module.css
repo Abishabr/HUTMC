@@ -1,0 +1,343 @@
+/* Members Page Styles */
+
+/* Hero Section */
+.heroSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--charcoal-deep));
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 8rem 0 10rem;
+  }
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, hsl(var(--gold) / 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.heroContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .heroContent {
+    padding: 0 3rem;
+  }
+}
+
+.heroSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 6rem;
+  }
+}
+
+.heroTitleGold {
+  background: linear-gradient(135deg, hsl(var(--gold-bright)), hsl(var(--gold)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDescription {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* Leadership Section */
+.leadershipSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--background));
+}
+
+@media (min-width: 1024px) {
+  .leadershipSection {
+    padding: 8rem 0;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.leadershipHeader {
+  margin-bottom: 4rem;
+}
+
+.leadershipTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .leadershipTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.leadershipDescription {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  max-width: 32rem;
+}
+
+.leadershipGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .leadershipGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .leadershipGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.leaderCard {
+  text-align: center;
+}
+
+.leaderAvatar {
+  margin-bottom: 1.5rem;
+}
+
+.leaderAvatarPlaceholder {
+  aspect-ratio: 1;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / 0.3);
+  transition: border-color var(--transition-base);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(var(--charcoal-light)), hsl(var(--card)));
+}
+
+.leaderCard:hover .leaderAvatarPlaceholder {
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.leaderInitial {
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  color: hsl(var(--primary) / 0.3);
+}
+
+.leaderName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.25rem;
+}
+
+.leaderRole {
+  font-family: var(--font-body);
+  color: hsl(var(--primary));
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.leaderDepartment {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+/* Departments Section */
+.departmentsSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--charcoal-deep));
+}
+
+@media (min-width: 1024px) {
+  .departmentsSection {
+    padding: 8rem 0;
+  }
+}
+
+.departmentsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.departmentsSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.departmentsTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 640px) {
+  .departmentsTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.departmentsGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .departmentsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.departmentCard {
+  padding: 2rem;
+  background-color: hsl(var(--card));
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid hsl(var(--border) / 0.3);
+  text-align: center;
+}
+
+.departmentIcon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background-color: hsl(var(--primary) / 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.departmentIconSvg {
+  color: hsl(var(--primary));
+}
+
+.departmentName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.departmentCount {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  color: hsl(var(--primary));
+  margin-bottom: 0.75rem;
+}
+
+.departmentDescription {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Total Section */
+.totalSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--background));
+}
+
+@media (min-width: 1024px) {
+  .totalSection {
+    padding: 8rem 0;
+  }
+}
+
+.totalContent {
+  text-align: center;
+}
+
+.totalSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.totalNumber {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1;
+  background: linear-gradient(135deg, hsl(var(--gold-bright)), hsl(var(--gold)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .totalNumber {
+    font-size: 8rem;
+  }
+}
+
+.totalDescription {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+}

@@ -1,0 +1,229 @@
+/* HeroSection Component CSS Module */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 5rem); /* Account for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Background */
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    hsl(var(--background)),
+    hsl(var(--background) / 0.8) 50%,
+    hsl(var(--background) / 0.4)
+  );
+}
+
+.sideGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    hsl(var(--background) / 0.6),
+    transparent 50%,
+    hsl(var(--background) / 0.6)
+  );
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.contentWrapper {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: hsl(var(--primary));
+  margin-bottom: 1.5rem;
+}
+
+/* Title */
+.title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+.titlePrimary {
+  color: hsl(var(--foreground));
+}
+
+.titleGradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--gold-bright)) 0%,
+    hsl(var(--gold)) 50%,
+    hsl(var(--gold-muted)) 100%
+  );
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .ctaButtons {
+    flex-direction: row;
+  }
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-radius: calc(var(--radius) - 4px);
+  transition: box-shadow var(--transition-base);
+  text-decoration: none;
+}
+
+.primaryButton:hover {
+  box-shadow: var(--shadow-gold);
+}
+
+.buttonIcon {
+  transition: transform var(--transition-base);
+}
+
+.primaryButton:hover .buttonIcon {
+  transform: translateX(0.25rem);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-radius: calc(var(--radius) - 4px);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color var(--transition-base);
+}
+
+.secondaryButton:hover {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.playIcon {
+  color: hsl(var(--primary));
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary)),
+    transparent
+  );
+}

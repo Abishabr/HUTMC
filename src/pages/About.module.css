@@ -1,0 +1,382 @@
+/* About Page Styles */
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  padding: 6rem 0 8rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 8rem 0 10rem;
+  }
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, hsl(var(--background)), hsl(var(--background) / 0.9), hsl(var(--background) / 0.7));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .heroContent {
+    padding: 0 3rem;
+  }
+}
+
+.heroSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 6rem;
+  }
+}
+
+.heroTitleText {
+  color: hsl(var(--foreground));
+}
+
+.heroTitleGold {
+  background: linear-gradient(135deg, hsl(var(--gold-bright)), hsl(var(--gold)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDescription {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.missionSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--background));
+}
+
+@media (min-width: 1024px) {
+  .missionSection {
+    padding: 8rem 0;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.missionGrid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .missionGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.missionTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .missionTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.missionTitleGold {
+  background: linear-gradient(135deg, hsl(var(--gold-bright)), hsl(var(--gold)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.missionText {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+}
+
+.missionImageContainer {
+  position: relative;
+}
+
+.missionImage {
+  aspect-ratio: 1;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.missionImage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 30%, hsl(var(--gold) / 0.1) 70%);
+  z-index: 10;
+}
+
+.missionImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.missionImageDecor {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: calc(var(--radius) - 4px);
+  z-index: -10;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--charcoal-deep));
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .valuesSection {
+    padding: 8rem 0;
+  }
+}
+
+.valuesSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, hsl(var(--gold) / 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.valuesHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.valuesSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.valuesTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 640px) {
+  .valuesTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.valuesGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.valueCard {
+  padding: 2rem;
+  background-color: hsl(var(--card));
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid hsl(var(--border) / 0.3);
+  transition: border-color var(--transition-base);
+}
+
+.valueCard:hover {
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.valueIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: hsl(var(--primary) / 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.valueIconSvg {
+  color: hsl(var(--primary));
+}
+
+.valueTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+.valueDescription {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+/* History Section */
+.historySection {
+  padding: 6rem 0 8rem;
+  background-color: hsl(var(--background));
+}
+
+@media (min-width: 1024px) {
+  .historySection {
+    padding: 8rem 0;
+  }
+}
+
+.historyHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.historySubtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.historyTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 640px) {
+  .historyTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.timeline {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.timelineYear {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.timelineContent {
+  padding-top: 0.5rem;
+}
+
+.timelineTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.timelineDescription {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+}

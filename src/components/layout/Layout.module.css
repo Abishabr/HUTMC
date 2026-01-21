@@ -1,0 +1,16 @@
+/* Layout Component CSS Module */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  padding-top: 5rem; /* Account for fixed navbar */
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}

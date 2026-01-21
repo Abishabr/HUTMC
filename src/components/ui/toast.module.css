@@ -1,0 +1,230 @@
+/* Toast Component CSS Module */
+
+/* Viewport */
+.viewport {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  max-height: 100vh;
+  width: 100%;
+  flex-direction: column-reverse;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .viewport {
+    bottom: 0;
+    right: 0;
+    top: auto;
+    flex-direction: column;
+    max-width: 26.25rem;
+  }
+}
+
+/* Toast Base */
+.toast {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid hsl(var(--border));
+  padding: 1.5rem;
+  padding-right: 2rem;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.toast[data-swipe="cancel"] {
+  transform: translateX(0);
+}
+
+.toast[data-swipe="end"] {
+  transform: translateX(var(--radix-toast-swipe-end-x));
+}
+
+.toast[data-swipe="move"] {
+  transform: translateX(var(--radix-toast-swipe-move-x));
+  transition: none;
+}
+
+.toast[data-state="open"] {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+.toast[data-state="closed"] {
+  animation: slideOutToRight 0.3s ease-in, fadeOut 0.3s ease-in;
+}
+
+@media (min-width: 640px) {
+  .toast[data-state="open"] {
+    animation: slideInFromBottom 0.3s ease-out;
+  }
+}
+
+/* Toast Variants */
+.variantDefault {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.variantDestructive {
+  border-color: hsl(var(--destructive));
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Toast Action */
+.action {
+  display: inline-flex;
+  height: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid hsl(var(--border));
+  background-color: transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  ring-offset-color: hsl(var(--background));
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+}
+
+.action:hover {
+  background-color: hsl(var(--secondary));
+}
+
+.action:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring)), 0 0 0 4px hsl(var(--ring) / 0.3);
+}
+
+.action:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Destructive variant action styles */
+.variantDestructive .action {
+  border-color: hsl(var(--muted) / 0.4);
+}
+
+.variantDestructive .action:hover {
+  border-color: hsl(var(--destructive) / 0.3);
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.variantDestructive .action:focus {
+  box-shadow: 0 0 0 2px hsl(var(--destructive)), 0 0 0 4px hsl(var(--destructive) / 0.3);
+}
+
+/* Toast Close */
+.close {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.25rem;
+  color: hsl(var(--foreground) / 0.5);
+  opacity: 0;
+  transition: opacity var(--transition-base), color var(--transition-base);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toast:hover .close {
+  opacity: 1;
+}
+
+.close:hover {
+  color: hsl(var(--foreground));
+}
+
+.close:focus {
+  opacity: 1;
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring));
+}
+
+.variantDestructive .close {
+  color: rgb(252 165 165);
+}
+
+.variantDestructive .close:hover {
+  color: rgb(254 202 202);
+}
+
+.variantDestructive .close:focus {
+  box-shadow: 0 0 0 2px rgb(248 113 113);
+}
+
+.closeIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Toast Title */
+.title {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+/* Toast Description */
+.description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

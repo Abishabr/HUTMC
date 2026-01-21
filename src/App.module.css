@@ -1,0 +1,90 @@
+/* App component styles - CSS Modules */
+
+.app {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+}
+
+.appContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error boundary styles */
+.errorBoundary {
+  padding: 2rem;
+  text-align: center;
+  background-color: hsl(var(--destructive) / 0.1);
+  border: 1px solid hsl(var(--destructive) / 0.2);
+  border-radius: var(--radius);
+  margin: 1rem;
+}
+
+.errorBoundary h2 {
+  color: hsl(var(--destructive));
+  margin-bottom: 1rem;
+}
+
+.errorBoundary pre {
+  background-color: hsl(var(--muted));
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: left;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Loading states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loadingSpinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid hsl(var(--muted));
+  border-top: 2px solid hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast notifications positioning */
+.toastContainer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .errorBoundary {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .toastContainer {
+    top: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+  }
+}

@@ -1,0 +1,195 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Functional Behavior Test Report</title>
+      <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #f8f9fa; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; text-align: center; }
+        .header h1 { color: #2c3e50; margin-bottom: 0.5rem; }
+        .header p { color: #7f8c8d; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .metric { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+        .metric-value { font-size: 2rem; font-weight: bold; color: #3498db; display: block; margin-bottom: 0.5rem; }
+        .metric-label { color: #7f8c8d; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .category { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .category h2 { color: #2c3e50; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #ecf0f1; }
+        .scenario { border: 1px solid #ecf0f1; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+        .scenario.passed { border-left: 4px solid #27ae60; background: #f8fff9; }
+        .scenario.failed { border-left: 4px solid #e74c3c; background: #fff8f8; }
+        .scenario h3 { color: #2c3e50; margin-bottom: 0.5rem; }
+        .scenario-meta { color: #7f8c8d; font-size: 0.875rem; margin-bottom: 1rem; }
+        .errors { background: #fff8f8; border: 1px solid #e74c3c; border-radius: 8px; padding: 1rem; margin-top: 2rem; }
+        .errors h3 { color: #e74c3c; margin-bottom: 1rem; }
+        .error { background: white; padding: 0.75rem; border-radius: 4px; margin-bottom: 0.5rem; font-size: 0.875rem; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>Functional Behavior Test Report</h1>
+          <p>Generated: 2026-01-21T18:16:36.965Z</p>
+          <p>Duration: 17657ms</p>
+        </div>
+        
+        <div class="summary">
+          <div class="metric">
+            <span class="metric-value">11</span>
+            <span class="metric-label">Total Scenarios</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">10</span>
+            <span class="metric-label">Passed Scenarios</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">57</span>
+            <span class="metric-label">Total Steps</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">90.9%</span>
+            <span class="metric-label">Scenario Pass Rate</span>
+          </div>
+        </div>
+        
+        
+          <div class="category">
+            <h2>Navigation Tests</h2>
+            <p>Scenarios: 2/3 passed</p>
+            
+            
+              <div class="scenario passed">
+                <h3>Main Navigation Links</h3>
+                <div class="scenario-meta">
+                  Test all main navigation menu links • 1822ms • 9 steps
+                </div>
+                
+              </div>
+            
+              <div class="scenario failed">
+                <h3>Mobile Navigation</h3>
+                <div class="scenario-meta">
+                  Test mobile menu functionality • 2332ms • 5 steps
+                </div>
+                
+                  <div class="errors">
+                    <div class="error">Step 5 failed: Simulated error</div>
+                  </div>
+                
+              </div>
+            
+              <div class="scenario passed">
+                <h3>Browser Navigation</h3>
+                <div class="scenario-meta">
+                  Test browser back/forward functionality • 2348ms • 4 steps
+                </div>
+                
+              </div>
+            
+          </div>
+        
+          <div class="category">
+            <h2>Forms Tests</h2>
+            <p>Scenarios: 2/2 passed</p>
+            
+            
+              <div class="scenario passed">
+                <h3>Contact Form Validation</h3>
+                <div class="scenario-meta">
+                  Test contact form validation and submission • 1626ms • 8 steps
+                </div>
+                
+              </div>
+            
+              <div class="scenario passed">
+                <h3>Form Field Interactions</h3>
+                <div class="scenario-meta">
+                  Test individual form field behaviors • 1623ms • 5 steps
+                </div>
+                
+              </div>
+            
+          </div>
+        
+          <div class="category">
+            <h2>Interactions Tests</h2>
+            <p>Scenarios: 2/2 passed</p>
+            
+            
+              <div class="scenario passed">
+                <h3>Gallery Interactions</h3>
+                <div class="scenario-meta">
+                  Test gallery filtering and lightbox functionality • 1317ms • 6 steps
+                </div>
+                
+              </div>
+            
+              <div class="scenario passed">
+                <h3>Button Interactions</h3>
+                <div class="scenario-meta">
+                  Test various button interactions throughout the site • 1523ms • 4 steps
+                </div>
+                
+              </div>
+            
+          </div>
+        
+          <div class="category">
+            <h2>State Tests</h2>
+            <p>Scenarios: 2/2 passed</p>
+            
+            
+              <div class="scenario passed">
+                <h3>Gallery State Management</h3>
+                <div class="scenario-meta">
+                  Test gallery category state persistence • 882ms • 4 steps
+                </div>
+                
+              </div>
+            
+              <div class="scenario passed">
+                <h3>Form State Management</h3>
+                <div class="scenario-meta">
+                  Test form state during user interaction • 670ms • 5 steps
+                </div>
+                
+              </div>
+            
+          </div>
+        
+          <div class="category">
+            <h2>Routing Tests</h2>
+            <p>Scenarios: 2/2 passed</p>
+            
+            
+              <div class="scenario passed">
+                <h3>Route Parameters</h3>
+                <div class="scenario-meta">
+                  Test URL routing and parameters • 1668ms • 4 steps
+                </div>
+                
+              </div>
+            
+              <div class="scenario passed">
+                <h3>Deep Linking</h3>
+                <div class="scenario-meta">
+                  Test direct navigation to deep routes • 1836ms • 3 steps
+                </div>
+                
+              </div>
+            
+          </div>
+        
+        
+        
+          <div class="errors">
+            <h3>Errors Summary</h3>
+            
+              <div class="error">Step 5 failed: Simulated error</div>
+            
+          </div>
+        
+      </div>
+    </body>
+    </html>
+  

@@ -1,0 +1,390 @@
+/* Base CSS Module - HUTMC Theatre Design System */
+
+/* CSS Custom Properties - Extracted from Tailwind Config */
+:root {
+  /* HUMTC Theatre-Inspired Design System */
+  
+  /* Primary Background - Deep Charcoal Stage */
+  --background: 220 20% 6%;
+  --foreground: 45 10% 92%;
+
+  /* Cards - Slightly Elevated Surfaces */
+  --card: 220 18% 10%;
+  --card-foreground: 45 10% 92%;
+
+  /* Popover/Overlay Surfaces */
+  --popover: 220 18% 12%;
+  --popover-foreground: 45 10% 92%;
+
+  /* Primary - Warm Theatre Gold */
+  --primary: 42 75% 50%;
+  --primary-foreground: 220 20% 6%;
+
+  /* Secondary - Muted Stone */
+  --secondary: 220 12% 18%;
+  --secondary-foreground: 45 8% 80%;
+
+  /* Muted Elements */
+  --muted: 220 15% 14%;
+  --muted-foreground: 220 10% 55%;
+
+  /* Accent - Soft Gold Glow */
+  --accent: 42 60% 45%;
+  --accent-foreground: 220 20% 6%;
+
+  /* Destructive States */
+  --destructive: 0 65% 45%;
+  --destructive-foreground: 45 10% 95%;
+
+  /* Success States */
+  --success: 142 76% 36%;
+  --success-foreground: 45 10% 95%;
+
+  /* Borders & Inputs */
+  --border: 220 15% 18%;
+  --input: 220 15% 18%;
+  --ring: 42 75% 50%;
+
+  --radius: 0.375rem;
+
+  /* Custom Properties for HUMTC */
+  --gold: 42 75% 50%;
+  --gold-muted: 42 45% 35%;
+  --gold-bright: 42 85% 60%;
+  --charcoal-deep: 220 20% 4%;
+  --charcoal: 220 20% 8%;
+  --charcoal-light: 220 18% 14%;
+  --stone: 30 8% 75%;
+  --stone-dark: 30 6% 45%;
+  --cream: 45 20% 95%;
+
+  /* Typography Scale */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Shadows - Soft Stage Lighting */
+  --shadow-sm: 0 2px 8px -2px hsl(220 20% 0% / 0.4);
+  --shadow-md: 0 8px 24px -8px hsl(220 20% 0% / 0.5);
+  --shadow-lg: 0 16px 48px -16px hsl(220 20% 0% / 0.6);
+  --shadow-gold: 0 4px 20px -4px hsl(42 75% 50% / 0.25);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Sidebar */
+  --sidebar-background: 220 18% 8%;
+  --sidebar-foreground: 45 10% 85%;
+  --sidebar-primary: 42 75% 50%;
+  --sidebar-primary-foreground: 220 20% 6%;
+  --sidebar-accent: 220 15% 14%;
+  --sidebar-accent-foreground: 45 10% 85%;
+  --sidebar-border: 220 15% 15%;
+  --sidebar-ring: 42 75% 50%;
+}
+
+/* Base Utility Classes - Equivalent to Tailwind Container */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Responsive Breakpoint Mixins - Equivalent to Tailwind Breakpoints */
+/* sm: 640px */
+@media (min-width: 640px) {
+  .smShow { display: block; }
+  .smHide { display: none; }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  .mdShow { display: block; }
+  .mdHide { display: none; }
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  .lgShow { display: block; }
+  .lgHide { display: none; }
+}
+
+/* xl: 1280px */
+@media (min-width: 1280px) {
+  .xlShow { display: block; }
+  .xlHide { display: none; }
+}
+
+/* 2xl: 1536px */
+@media (min-width: 1536px) {
+  .xxlShow { display: block; }
+  .xxlHide { display: none; }
+}
+
+/* Common Layout Classes */
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.inlineFlex {
+  display: inline-flex;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Flexbox Utilities */
+.itemsCenter {
+  align-items: center;
+}
+
+.itemsStart {
+  align-items: flex-start;
+}
+
+.itemsEnd {
+  align-items: flex-end;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+/* Gap Utilities */
+.gap1 { gap: 0.25rem; }
+.gap2 { gap: 0.5rem; }
+.gap3 { gap: 0.75rem; }
+.gap4 { gap: 1rem; }
+.gap5 { gap: 1.25rem; }
+.gap6 { gap: 1.5rem; }
+.gap8 { gap: 2rem; }
+.gap10 { gap: 2.5rem; }
+.gap12 { gap: 3rem; }
+
+/* Spacing Utilities */
+.p0 { padding: 0; }
+.p1 { padding: 0.25rem; }
+.p2 { padding: 0.5rem; }
+.p3 { padding: 0.75rem; }
+.p4 { padding: 1rem; }
+.p5 { padding: 1.25rem; }
+.p6 { padding: 1.5rem; }
+.p8 { padding: 2rem; }
+.p10 { padding: 2.5rem; }
+.p12 { padding: 3rem; }
+
+.px1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px4 { padding-left: 1rem; padding-right: 1rem; }
+.px6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px8 { padding-left: 2rem; padding-right: 2rem; }
+
+.py1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py8 { padding-top: 2rem; padding-bottom: 2rem; }
+
+.m0 { margin: 0; }
+.m1 { margin: 0.25rem; }
+.m2 { margin: 0.5rem; }
+.m3 { margin: 0.75rem; }
+.m4 { margin: 1rem; }
+.m6 { margin: 1.5rem; }
+.m8 { margin: 2rem; }
+
+.mx1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx4 { margin-left: 1rem; margin-right: 1rem; }
+.mx6 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mxAuto { margin-left: auto; margin-right: auto; }
+
+.my1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my4 { margin-top: 1rem; margin-bottom: 1rem; }
+.my6 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my8 { margin-top: 2rem; margin-bottom: 2rem; }
+
+/* Typography Utilities */
+.textXs { font-size: 0.75rem; line-height: 1rem; }
+.textSm { font-size: 0.875rem; line-height: 1.25rem; }
+.textBase { font-size: 1rem; line-height: 1.5rem; }
+.textLg { font-size: 1.125rem; line-height: 1.75rem; }
+.textXl { font-size: 1.25rem; line-height: 1.75rem; }
+.text2xl { font-size: 1.5rem; line-height: 2rem; }
+.text3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text5xl { font-size: 3rem; line-height: 1; }
+.text6xl { font-size: 3.75rem; line-height: 1; }
+.text7xl { font-size: 4.5rem; line-height: 1; }
+.text8xl { font-size: 6rem; line-height: 1; }
+
+.fontThin { font-weight: 100; }
+.fontLight { font-weight: 300; }
+.fontNormal { font-weight: 400; }
+.fontMedium { font-weight: 500; }
+.fontSemibold { font-weight: 600; }
+.fontBold { font-weight: 700; }
+.fontExtrabold { font-weight: 800; }
+
+.fontDisplay { font-family: var(--font-display); }
+.fontBody { font-family: var(--font-body); }
+
+.textCenter { text-align: center; }
+.textLeft { text-align: left; }
+.textRight { text-align: right; }
+
+.leadingTight { line-height: 1.25; }
+.leadingSnug { line-height: 1.375; }
+.leadingNormal { line-height: 1.5; }
+.leadingRelaxed { line-height: 1.625; }
+.leadingLoose { line-height: 2; }
+
+.trackingTighter { letter-spacing: -0.05em; }
+.trackingTight { letter-spacing: -0.025em; }
+.trackingNormal { letter-spacing: 0em; }
+.trackingWide { letter-spacing: 0.025em; }
+.trackingWider { letter-spacing: 0.05em; }
+
+/* Color Utilities */
+.textPrimary { color: hsl(var(--primary)); }
+.textSecondary { color: hsl(var(--secondary)); }
+.textMuted { color: hsl(var(--muted-foreground)); }
+.textForeground { color: hsl(var(--foreground)); }
+.textGold { color: hsl(var(--gold)); }
+.textGoldMuted { color: hsl(var(--gold-muted)); }
+.textGoldBright { color: hsl(var(--gold-bright)); }
+
+.bgPrimary { background-color: hsl(var(--primary)); }
+.bgSecondary { background-color: hsl(var(--secondary)); }
+.bgMuted { background-color: hsl(var(--muted)); }
+.bgBackground { background-color: hsl(var(--background)); }
+.bgCard { background-color: hsl(var(--card)); }
+
+.borderPrimary { border-color: hsl(var(--primary)); }
+.borderSecondary { border-color: hsl(var(--secondary)); }
+.borderMuted { border-color: hsl(var(--border)); }
+.borderGold { border-color: hsl(var(--gold)); }
+
+/* Border Utilities */
+.border { border-width: 1px; }
+.border0 { border-width: 0; }
+.border2 { border-width: 2px; }
+.borderT { border-top-width: 1px; }
+.borderB { border-bottom-width: 1px; }
+.borderL { border-left-width: 1px; }
+.borderR { border-right-width: 1px; }
+
+.rounded { border-radius: var(--radius); }
+.roundedSm { border-radius: calc(var(--radius) - 4px); }
+.roundedMd { border-radius: calc(var(--radius) - 2px); }
+.roundedLg { border-radius: calc(var(--radius) + 2px); }
+.roundedXl { border-radius: calc(var(--radius) + 4px); }
+.roundedFull { border-radius: 9999px; }
+.roundedNone { border-radius: 0; }
+
+/* Shadow Utilities */
+.shadowSm { box-shadow: var(--shadow-sm); }
+.shadowMd { box-shadow: var(--shadow-md); }
+.shadowLg { box-shadow: var(--shadow-lg); }
+.shadowGold { box-shadow: var(--shadow-gold); }
+.shadowNone { box-shadow: none; }
+
+/* Position Utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* Width & Height Utilities */
+.wFull { width: 100%; }
+.wAuto { width: auto; }
+.hFull { height: 100%; }
+.hAuto { height: auto; }
+.hScreen { height: 100vh; }
+
+/* Overflow Utilities */
+.overflowHidden { overflow: hidden; }
+.overflowAuto { overflow: auto; }
+.overflowScroll { overflow: scroll; }
+
+/* Transition Utilities */
+.transitionAll { transition: all var(--transition-base); }
+.transitionColors { transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base); }
+.transitionTransform { transition: transform var(--transition-base); }
+
+/* Transform Utilities */
+.translateY1 { transform: translateY(-0.25rem); }
+.translateY2 { transform: translateY(-0.5rem); }
+.scale105 { transform: scale(1.05); }
+.scale110 { transform: scale(1.1); }
+
+/* Cursor Utilities */
+.cursorPointer { cursor: pointer; }
+.cursorDefault { cursor: default; }
+.cursorNotAllowed { cursor: not-allowed; }
+
+/* Opacity Utilities */
+.opacity0 { opacity: 0; }
+.opacity25 { opacity: 0.25; }
+.opacity50 { opacity: 0.5; }
+.opacity75 { opacity: 0.75; }
+.opacity100 { opacity: 1; }
+
+/* Z-Index Utilities */
+.z0 { z-index: 0; }
+.z10 { z-index: 10; }
+.z20 { z-index: 20; }
+.z30 { z-index: 30; }
+.z40 { z-index: 40; }
+.z50 { z-index: 50; }

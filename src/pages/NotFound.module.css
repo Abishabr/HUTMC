@@ -1,0 +1,35 @@
+/* NotFound Page Styles */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--muted));
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.link {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: hsl(var(--primary) / 0.9);
+}

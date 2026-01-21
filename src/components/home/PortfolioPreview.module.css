@@ -1,0 +1,239 @@
+/* PortfolioPreview Component CSS Module */
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: hsl(var(--charcoal-deep));
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Spotlight Effect */
+.section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center top,
+    hsl(var(--gold) / 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Section Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* Portfolio Grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: 3rem;
+  }
+}
+
+/* Portfolio Card */
+.card {
+  display: block;
+  position: relative;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-lg);
+}
+
+.imageContainer {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease-out;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    hsl(var(--background)),
+    hsl(var(--background) / 0.4) 50%,
+    transparent
+  );
+}
+
+/* Content Overlay */
+.content {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.iconSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.iconWrapper {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--primary) / 0.1);
+  border: 1px solid hsl(var(--primary) / 0.3);
+}
+
+.icon {
+  color: hsl(var(--primary));
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--primary));
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.description {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+  max-width: 24rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  transition: color var(--transition-base);
+}
+
+.card:hover .cta {
+  color: hsl(var(--primary));
+}
+
+.ctaIcon {
+  transition: transform var(--transition-base);
+}
+
+.card:hover .ctaIcon {
+  transform: translateX(0.25rem);
+}
+
+/* Border Glow Effect */
+.borderGlow {
+  position: absolute;
+  inset: 0;
+  border: 1px solid hsl(var(--border) / 0.3);
+  border-radius: calc(var(--radius) - 4px);
+  transition: border-color var(--transition-base);
+}
+
+.card:hover .borderGlow {
+  border-color: hsl(var(--primary) / 0.3);
+}

@@ -1,0 +1,65 @@
+/* Alert Component CSS Module */
+
+/* Alert Base */
+.alert {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  padding: 1rem;
+}
+
+/* Icon positioning */
+.alert > svg {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.alert > svg ~ * {
+  padding-left: 1.75rem;
+}
+
+.alert > svg + div {
+  transform: translateY(-3px);
+}
+
+/* Alert Variants */
+.variantDefault {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.variantDestructive {
+  border-color: hsl(var(--destructive) / 0.5);
+  color: hsl(var(--destructive));
+}
+
+.variantDestructive > svg {
+  color: hsl(var(--destructive));
+}
+
+@media (prefers-color-scheme: dark) {
+  .variantDestructive {
+    border-color: hsl(var(--destructive));
+  }
+}
+
+/* Alert Title */
+.title {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+/* Alert Description */
+.description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.description p {
+  line-height: 1.625;
+}

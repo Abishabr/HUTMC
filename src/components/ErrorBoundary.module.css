@@ -1,0 +1,227 @@
+/* Error Boundary Styles */
+
+.errorBoundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: hsl(var(--background));
+}
+
+.errorContainer {
+  max-width: 32rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: hsl(var(--card));
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-lg);
+}
+
+.errorIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 2rem;
+  background-color: hsl(var(--destructive) / 0.1);
+  border-radius: 50%;
+}
+
+.errorIconSvg {
+  color: hsl(var(--destructive));
+}
+
+.errorTitle {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .errorTitle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.errorMessage {
+  font-family: var(--font-body);
+  color: hsl(var(--muted-foreground));
+  line-height: 1.625;
+  margin-bottom: 2rem;
+}
+
+.errorDetails {
+  text-align: left;
+  margin-bottom: 2rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.errorDetailsSummary {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  padding: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.errorDetailsSummary:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.errorDetailsContent {
+  padding: 1rem;
+}
+
+.errorDetailsContent h3 {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.errorDetailsContent h3:first-child {
+  margin-top: 0;
+}
+
+.errorStack {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 4px);
+  padding: 0.75rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 12rem;
+  overflow-y: auto;
+}
+
+.errorActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .errorActions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.retryButton,
+.reloadButton,
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.retryButton {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.retryButton:hover {
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+.reloadButton {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--secondary));
+}
+
+.reloadButton:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+  transform: translateY(-1px);
+}
+
+.homeButton {
+  background-color: transparent;
+  color: hsl(var(--muted-foreground));
+  border-color: hsl(var(--border));
+}
+
+.homeButton:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  transform: translateY(-1px);
+}
+
+.buttonIcon {
+  transition: transform var(--transition-base);
+}
+
+.retryButton:hover .buttonIcon,
+.reloadButton:hover .buttonIcon {
+  transform: rotate(180deg);
+}
+
+.homeButton:hover .buttonIcon {
+  transform: translateX(-2px);
+}
+
+.errorId {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground) / 0.7);
+  margin: 0;
+  padding: 0.5rem;
+  background-color: hsl(var(--muted) / 0.3);
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .errorBoundary {
+    padding: 1rem;
+  }
+  
+  .errorContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .errorTitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .errorActions {
+    gap: 0.5rem;
+  }
+  
+  .retryButton,
+  .reloadButton,
+  .homeButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
