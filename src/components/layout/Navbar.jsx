@@ -9,6 +9,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import styles from './Navbar.module.css';
+import logo from '@/assets/Logo.PNG';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -34,9 +35,8 @@ export const Navbar = () => {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoText}>
-              HUMTC
-            </span>
+            <img src={logo} alt="HUMTC logo" className={styles.logoImage} />
+            <span className={styles.logoText}>HUTMC</span>
           </Link>
 
           {/* Desktop Navigation */}

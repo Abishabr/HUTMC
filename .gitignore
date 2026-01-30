@@ -22,3 +22,36 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Vite / cache
+.vite
+.cache
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Keys / certificates
+*.pem
+*.key
+*.p12
+
+# Coverage, test output
+coverage
+coverage/
+*.lcov
+
+# Build outputs / temp
+build/
+out/
+.tmp
+
+# Large media / archives (consider Git LFS if needed)
+*.mp4
+*.mov
+*.zip

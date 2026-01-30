@@ -9,6 +9,8 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react()],
+  // Include uppercase PNG assets (some image files may use .PNG extension)
+  assetsInclude: ['**/*.PNG'],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "./src"),

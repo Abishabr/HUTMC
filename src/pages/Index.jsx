@@ -1,7 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
 import { AboutPreview } from '@/components/home/AboutPreview';
-import { PortfolioPreview } from '@/components/home/PortfolioPreview';
 import { EventsPreview } from '@/components/home/EventsPreview';
 import { JoinCTA } from '@/components/home/JoinCTA';
 
@@ -10,7 +9,7 @@ const Index = () => {
     <Layout>
       <HeroSection />
       <AboutPreview />
-      <PortfolioPreview />
+      {/* Portfolio preview removed per request */}
       <EventsPreview />
       <JoinCTA />
     </Layout>

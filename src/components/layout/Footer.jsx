@@ -7,12 +7,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Youtube, Facebook, Mail } from 'lucide-react';
 import styles from './Footer.module.css';
+import logo from '@/assets/Logo.PNG';
 
 const footerLinks = {
   explore: [
     { name: 'About Us', path: '/about' },
-    { name: 'Theatre Portfolio', path: '/theatre' },
-    { name: 'Music Portfolio', path: '/music' },
+    { name: 'Theatre', path: '/theatre' },
+    { name: 'Music', path: '/music' },
     { name: 'Events', path: '/events' },
   ],
   community: [
@@ -42,9 +43,8 @@ export const Footer = () => {
           {/* Brand */}
           <div className={styles.brand}>
             <Link to="/" className={styles.brandLink}>
-              <span className={styles.brandText}>
-                HUMTC
-              </span>
+              <img src={logo} alt="HUMTC logo" className={styles.brandLogo} />
+              <span className={styles.brandText}>HUTMC</span>
             </Link>
             <p className={styles.brandDescription}>
               Haramaya University Theatre and Music Club. Where creativity meets

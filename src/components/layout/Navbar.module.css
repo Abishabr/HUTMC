@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: var(--nav-height);
   width: 100%;
   position: relative;
 }
@@ -45,11 +45,17 @@
 
 .logoText {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 600;
-  color: hsl(var(--foreground));
+  color: hsl(var(--primary));
   transition: color var(--transition-base);
+}
+
+.logoImage {
+  width: 3.25rem;
+  height: auto;
+  display: block;
 }
 
 .logo:hover .logoText {
@@ -129,16 +135,13 @@
 
 .joinButton {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.8125rem; /* 13px */
   line-height: 1.25rem;
   font-weight: 500;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 0.4rem 0.75rem;
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
-  border-radius: calc(var(--radius) - 2px);
+  border-radius: 0.25rem;
   transition: all var(--transition-base);
   text-decoration: none;
   display: inline-flex;

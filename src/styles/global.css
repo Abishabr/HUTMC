@@ -8,6 +8,15 @@
   border-color: hsl(var(--border));
 }
 
+/* Use border-box globally to avoid padding causing overflow */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +27,11 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll caused by overflowing elements */
+html, body {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

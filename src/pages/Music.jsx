@@ -70,7 +70,7 @@ const MusicPage = () => {
             transition={{ duration: 0.8 }}
           >
             <p className={styles.heroSubtitle}>
-              Portfolio
+              Explore
             </p>
             <h1 className={styles.heroTitle}>
               <span className={styles.heroTitleGold}>Music</span>

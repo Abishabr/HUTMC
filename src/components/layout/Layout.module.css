@@ -9,7 +9,7 @@
 
 .main {
   flex: 1;
-  padding-top: 5rem; /* Account for fixed navbar */
+  padding-top: var(--nav-height); /* Account for fixed navbar */
   position: relative;
   width: 100%;
   overflow-x: hidden;

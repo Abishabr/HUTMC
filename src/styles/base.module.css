@@ -46,6 +46,8 @@
   --ring: 42 75% 50%;
 
   --radius: 0.375rem;
+  /* Height used by the fixed navbar */
+  --nav-height: 5rem;
 
   /* Custom Properties for HUMTC */
   --gold: 42 75% 50%;

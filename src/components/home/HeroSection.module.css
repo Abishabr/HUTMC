@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 5rem); /* Account for navbar */
+  min-height: calc(100vh - var(--nav-height)); /* Account for navbar */
   display: flex;
   align-items: center;
   justify-content: center;

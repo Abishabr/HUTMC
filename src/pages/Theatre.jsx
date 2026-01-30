@@ -133,7 +133,7 @@ const Theatre = () => {
               className={styles.heroSubtitle}
             >
               <Sparkles size={14} />
-              Portfolio
+              Explore
               <Sparkles size={14} />
             </motion.p>
             
