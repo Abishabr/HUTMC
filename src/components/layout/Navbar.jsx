@@ -35,7 +35,9 @@ export const Navbar = () => {
         <div className={styles.navContent}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <img src={logo} alt="HUMTC logo" className={styles.logoImage} />
+            <span className={styles.logoWrap}>
+              <img src={logo} alt="HUMTC logo" className={styles.logoImage} />
+            </span>
             <span className={styles.logoText}>HUTMC</span>
           </Link>
 

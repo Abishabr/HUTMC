@@ -62,9 +62,21 @@
 }
 
 .brandLogo {
-  width: 3.25rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.brandLogoWrap {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .brandText {
@@ -105,9 +117,7 @@
 }
 
 /* Link Sections */
-.linkSection {
-  /* No specific styles needed, inherits from grid */
-}
+/* .linkSection styles removed because no specific styles are needed, inherits from grid */
 
 .sectionTitle {
   font-family: var(--font-display);

@@ -43,7 +43,9 @@ export const Footer = () => {
           {/* Brand */}
           <div className={styles.brand}>
             <Link to="/" className={styles.brandLink}>
-              <img src={logo} alt="HUMTC logo" className={styles.brandLogo} />
+              <span className={styles.brandLogoWrap}>
+                <img src={logo} alt="HUMTC logo" className={styles.brandLogo} />
+              </span>
               <span className={styles.brandText}>HUTMC</span>
             </Link>
             <p className={styles.brandDescription}>
