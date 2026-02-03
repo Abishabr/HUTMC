@@ -14,8 +14,10 @@ import logo from '@/assets/Logo.PNG';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Literature', path: '/literature' },
   { name: 'Theatre', path: '/theatre' },
   { name: 'Music', path: '/music' },
+  { name: 'Dance', path: '/dance' },
   { name: 'Events', path: '/events' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Members', path: '/members' },

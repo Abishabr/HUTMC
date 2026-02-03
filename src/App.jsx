@@ -10,8 +10,10 @@ import { setupGlobalErrorHandlers, reportBoundaryError } from "@/lib/errorReport
 import styles from "./App.module.css";
 import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
+import Literature from "./pages/Literature.jsx";
 import Theatre from "./pages/Theatre.jsx";
 import Music from "./pages/Music.jsx";
+import Dance from "./pages/Dance.jsx";
 import Events from "./pages/Events.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Members from "./pages/Members.jsx";
@@ -88,8 +90,10 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/literature" element={<Literature />} />
                 <Route path="/theatre" element={<Theatre />} />
                 <Route path="/music" element={<Music />} />
+                <Route path="/dance" element={<Dance />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/members" element={<Members />} />
