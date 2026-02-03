@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
-import { Users } from 'lucide-react';
+import { Users, Music } from 'lucide-react';
 import musicImage from '@/assets/music-performance.jpg';
 import styles from './Music.module.css';
 
@@ -164,6 +164,38 @@ const MusicPage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaBackground} />
+        <div className={styles.ctaBackgroundGlow}>
+          <div className={styles.ctaBackgroundGlowInner} />
+        </div>
+        
+        <div className={styles.container}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className={styles.ctaContent}
+          >
+            <Music className={styles.ctaIcon} />
+            <h2 className={styles.ctaTitle}>
+              Ready to Make Music?
+            </h2>
+            <p className={styles.ctaDescription}>
+              Join our club and be part of musical performances that celebrate our rich cultural heritage alongside other creative arts.
+            </p>
+            <a
+              href="/join"
+              className={styles.ctaButton}
+            >
+              Join the Club
+              <span>→</span>
+            </a>
+          </motion.div>
         </div>
       </section>
     </Layout>

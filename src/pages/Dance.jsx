@@ -410,13 +410,13 @@ const Dance = () => {
               Ready to Move with Us?
             </h2>
             <p className={styles.ctaDescription}>
-              Join our dance community and express yourself through the beautiful art of movement and rhythm.
+              Join our club and express yourself through the beautiful art of movement and rhythm alongside other creative disciplines.
             </p>
             <a
               href="/join"
               className={styles.ctaButton}
             >
-              Join the Dance Club
+              Join the Club
               <span>→</span>
             </a>
           </motion.div>

@@ -408,13 +408,13 @@ const Literature = () => {
               Ready to Share Your Voice?
             </h2>
             <p className={styles.ctaDescription}>
-              Join our literary community and contribute to our growing collection of creative works.
+              Join our club and contribute to our growing collection of creative works across all departments.
             </p>
             <a
               href="/join"
               className={styles.ctaButton}
             >
-              Join the Literature Club
+              Join the Club
               <span>→</span>
             </a>
           </motion.div>

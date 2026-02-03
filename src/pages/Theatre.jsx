@@ -391,13 +391,13 @@ const Theatre = () => {
               Ready to Take the Stage?
             </h2>
             <p className={styles.ctaDescription}>
-              Join our theatre ensemble and be part of productions that inspire and transform.
+              Join our club and be part of productions that inspire and transform across all our departments.
             </p>
             <a
               href="/join"
               className={styles.ctaButton}
             >
-              Join the Theatre Club
+              Join the Club
               <span>→</span>
             </a>
           </motion.div>
