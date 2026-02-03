@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
-import { Drama, Music, Paintbrush } from 'lucide-react';
+import { Drama, Music, Paintbrush, BookOpen, Heart } from 'lucide-react';
 import styles from './Members.module.css';
 
 const leadership = [
@@ -28,9 +28,27 @@ const leadership = [
     department: 'Traditional Music',
     image: null,
   },
+  {
+    name: 'Hanan Ahmed',
+    role: 'Literature Coordinator',
+    department: 'Poetry & Writing',
+    image: null,
+  },
+  {
+    name: 'Yonas Girma',
+    role: 'Dance Captain',
+    department: 'Traditional Dance',
+    image: null,
+  },
 ];
 
 const departments = [
+  {
+    name: 'Literature & Poetry',
+    icon: BookOpen,
+    members: 18,
+    description: 'Writers, poets, and storytellers crafting words that inspire.',
+  },
   {
     name: 'Theatre & Drama',
     icon: Drama,
@@ -42,6 +60,12 @@ const departments = [
     icon: Music,
     members: 15,
     description: 'Musicians and vocalists preserving our musical heritage.',
+  },
+  {
+    name: 'Dance & Movement',
+    icon: Heart,
+    members: 22,
+    description: 'Dancers celebrating culture through traditional and contemporary movement.',
   },
   {
     name: 'Production & Design',
@@ -181,7 +205,7 @@ const Members = () => {
               Growing Together
             </p>
             <p className={styles.totalNumber}>
-              50+
+              85+
             </p>
             <p className={styles.totalDescription}>
               Active Members and Counting

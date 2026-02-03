@@ -12,15 +12,21 @@ import styles from './Gallery.module.css';
 const galleryImages = [
   { id: 1, src: theatreImage, alt: 'Theatre performance', category: 'Theatre' },
   { id: 2, src: musicImage, alt: 'Music performance', category: 'Music' },
-  { id: 3, src: aboutImage, alt: 'Performers on stage', category: 'Theatre' },
+  { id: 3, src: aboutImage, alt: 'Poetry reading session', category: 'Literature' },
   { id: 4, src: heroImage, alt: 'Stage with lighting', category: 'Venue' },
   { id: 5, src: membersImage, alt: 'Club members', category: 'Members' },
   { id: 6, src: theatreImage, alt: 'Drama scene', category: 'Theatre' },
   { id: 7, src: musicImage, alt: 'Traditional music', category: 'Music' },
-  { id: 8, src: aboutImage, alt: 'Dance performance', category: 'Theatre' },
+  { id: 8, src: membersImage, alt: 'Dance performance', category: 'Dance' },
+  { id: 9, src: aboutImage, alt: 'Literary workshop', category: 'Literature' },
+  { id: 10, src: membersImage, alt: 'Traditional dance rehearsal', category: 'Dance' },
+  { id: 11, src: theatreImage, alt: 'Dramatic monologue', category: 'Theatre' },
+  { id: 12, src: aboutImage, alt: 'Creative writing session', category: 'Literature' },
+  { id: 13, src: membersImage, alt: 'Contemporary dance practice', category: 'Dance' },
+  { id: 14, src: musicImage, alt: 'Instrumental ensemble', category: 'Music' },
 ];
 
-const categories = ['All', 'Theatre', 'Music', 'Venue', 'Members'];
+const categories = ['All', 'Literature', 'Theatre', 'Music', 'Dance', 'Venue', 'Members'];
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
