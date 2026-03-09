@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, Github } from 'lucide-react';
 import styles from './Footer.module.css';
 import logo from '@/assets/Logo.PNG';
 
@@ -45,7 +45,7 @@ export const Footer = () => {
       <div className={styles.container}>
         {/* Main Footer Content */}
         <div className={styles.footerContent}>
-          {/* Logo and Description */}
+          {/* Left: Logo and Description */}
           <div className={styles.footerBrand}>
             <Link to="/" className={styles.footerLogo}>
               <span className={styles.logoWrap}>
@@ -71,7 +71,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Middle: Navigation Links */}
           <div className={styles.footerLinks}>
             {/* Categories */}
             <div className={styles.footerSection}>
@@ -139,6 +139,45 @@ export const Footer = () => {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Right: Developer Credits (Large) */}
+          <div className={styles.developerCreditsSection}>
+            <h3 className={styles.footerSectionTitle}>Developed by</h3>
+            <div className={styles.developersColumn}>
+              <a 
+                href="https://github.com/Abishabr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.developerItemLarge}
+              >
+                <img 
+                  src="https://github.com/Abishabr.png" 
+                  alt="Abrham Habtamu"
+                  className={styles.developerAvatarLarge}
+                />
+                <div className={styles.developerInfoLarge}>
+                  <span className={styles.developerNameLarge}>Abrham Habtamu</span>
+                  <span className={styles.githubUsernameLarge}>@Abishabr</span>
+                </div>
+              </a>
+              <a 
+                href="https://github.com/amanumoke" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.developerItemLarge}
+              >
+                <img 
+                  src="https://github.com/amanumoke.png" 
+                  alt="Amanuel Mekuant"
+                  className={styles.developerAvatarLarge}
+                />
+                <div className={styles.developerInfoLarge}>
+                  <span className={styles.developerNameLarge}>Amanuel Mekuant</span>
+                  <span className={styles.githubUsernameLarge}>@amanumoke</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
