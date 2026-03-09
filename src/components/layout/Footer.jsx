@@ -167,7 +167,7 @@ export const Footer = () => {
                       <Github size={18} className={styles.socialIcon} />
                     </a>
                     <a 
-                      href="https://linkedin.com/in/abrham-habtamu" 
+                      href="https://www.linkedin.com/in/abishabr/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className={styles.socialIconLink}
@@ -180,14 +180,14 @@ export const Footer = () => {
                       </svg>
                     </a>
                     <a 
-                      href="mailto:abrham@example.com" 
+                      href="mailto:abrhamhabtamu52@gmail.com" 
                       className={styles.socialIconLink}
                       aria-label="Email"
                     >
                       <Mail size={18} className={styles.socialIcon} />
                     </a>
                     <a 
-                      href="https://t.me/abrhamhabtamu" 
+                      href="https://t.me/b_arch" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className={styles.socialIconLink}
@@ -242,7 +242,7 @@ export const Footer = () => {
                       <Mail size={18} className={styles.socialIcon} />
                     </a>
                     <a 
-                      href="https://t.me/amanuelmekuant" 
+                      href="https://t.me/Agape211" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className={styles.socialIconLink}
