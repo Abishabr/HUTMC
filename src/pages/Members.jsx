@@ -18,27 +18,9 @@ const leadership = [
     image: vicePresidentImage,
   },
   {
-    name: 'Dawit Hailu',
-    role: 'Creative Director',
-    department: 'Drama',
-    image: null,
-  },
-  {
-    name: 'Tigist Bekele',
-    role: 'Music Director',
-    department: 'Traditional Music',
-    image: null,
-  },
-  {
-    name: 'Hanan Ahmed',
-    role: 'Literature Coordinator',
-    department: 'Poetry & Writing',
-    image: null,
-  },
-  {
-    name: 'Yonas Girma',
-    role: 'Dance Captain',
-    department: 'Traditional Dance',
+    name: 'Secretary Name',
+    role: 'Secretary',
+    department: 'Administration',
     image: null,
   },
 ];

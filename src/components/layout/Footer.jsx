@@ -144,14 +144,9 @@ export const Footer = () => {
 
           {/* Right: Developer Credits (Large) */}
           <div className={styles.developerCreditsSection}>
-            <h3 className={styles.footerSectionTitle}>Developed by</h3>
+            <p className={styles.developedByText}>Developed by</p>
             <div className={styles.developersColumn}>
-              <a 
-                href="https://github.com/Abishabr" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.developerItemLarge}
-              >
+              <div className={styles.developerItemLarge}>
                 <img 
                   src="https://github.com/Abishabr.png" 
                   alt="Abrham Habtamu"
@@ -159,15 +154,54 @@ export const Footer = () => {
                 />
                 <div className={styles.developerInfoLarge}>
                   <span className={styles.developerNameLarge}>Abrham Habtamu</span>
+                  <span className={styles.developerRole}>Fullstack Web Developer</span>
                   <span className={styles.githubUsernameLarge}>@Abishabr</span>
+                  <div className={styles.developerSocials}>
+                    <a 
+                      href="https://github.com/Abishabr" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="GitHub"
+                    >
+                      <Github size={18} className={styles.socialIcon} />
+                    </a>
+                    <a 
+                      href="https://linkedin.com/in/abrham-habtamu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="LinkedIn"
+                    >
+                      <svg className={styles.socialIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a 
+                      href="mailto:abrham@example.com" 
+                      className={styles.socialIconLink}
+                      aria-label="Email"
+                    >
+                      <Mail size={18} className={styles.socialIcon} />
+                    </a>
+                    <a 
+                      href="https://t.me/abrhamhabtamu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="Telegram"
+                    >
+                      <svg className={styles.socialIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m22 2-7 20-4-9-9-4Z"></path>
+                        <path d="M22 2 11 13"></path>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
-              <a 
-                href="https://github.com/amanumoke" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.developerItemLarge}
-              >
+              </div>
+              <div className={styles.developerItemLarge}>
                 <img 
                   src="https://github.com/amanumoke.png" 
                   alt="Amanuel Mekuant"
@@ -175,9 +209,53 @@ export const Footer = () => {
                 />
                 <div className={styles.developerInfoLarge}>
                   <span className={styles.developerNameLarge}>Amanuel Mekuant</span>
+                  <span className={styles.developerRole}>Fullstack Web Developer</span>
                   <span className={styles.githubUsernameLarge}>@amanumoke</span>
+                  <div className={styles.developerSocials}>
+                    <a 
+                      href="https://github.com/amanumoke" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="GitHub"
+                    >
+                      <Github size={18} className={styles.socialIcon} />
+                    </a>
+                    <a 
+                      href="https://linkedin.com/in/amanuel-mekuant" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="LinkedIn"
+                    >
+                      <svg className={styles.socialIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+                    <a 
+                      href="mailto:amanuel@example.com" 
+                      className={styles.socialIconLink}
+                      aria-label="Email"
+                    >
+                      <Mail size={18} className={styles.socialIcon} />
+                    </a>
+                    <a 
+                      href="https://t.me/amanuelmekuant" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.socialIconLink}
+                      aria-label="Telegram"
+                    >
+                      <svg className={styles.socialIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m22 2-7 20-4-9-9-4Z"></path>
+                        <path d="M22 2 11 13"></path>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
