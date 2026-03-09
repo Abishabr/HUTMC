@@ -139,59 +139,97 @@
 @media (min-width: 768px) {
   .leadershipGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .leadershipGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
   }
 }
 
 .leaderCard {
-  text-align: center;
-}
-
-.leaderAvatar {
-  margin-bottom: 1.5rem;
-}
-
-.leaderAvatarPlaceholder {
-  aspect-ratio: 1;
-  border-radius: calc(var(--radius) - 4px);
+  position: relative;
   overflow: hidden;
-  background-color: hsl(var(--card));
-  border: 1px solid hsl(var(--border) / 0.3);
-  transition: border-color var(--transition-base);
+  border-radius: calc(var(--radius));
+  transition: transform var(--transition-base);
+}
+
+.leaderCard:hover {
+  transform: translateY(-8px);
+}
+
+.leaderImageWrapper {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: calc(var(--radius));
+  background: linear-gradient(135deg, hsl(var(--charcoal-light)), hsl(var(--card)));
+}
+
+.leaderImage {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.leaderCard:hover .leaderImage {
+  transform: scale(1.05);
+}
+
+.leaderImagePlaceholder {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, hsl(var(--charcoal-light)), hsl(var(--card)));
-}
-
-.leaderCard:hover .leaderAvatarPlaceholder {
-  border-color: hsl(var(--primary) / 0.3);
+  border: 1px solid hsl(var(--border) / 0.3);
 }
 
 .leaderInitial {
   font-family: var(--font-display);
-  font-size: 3.75rem;
+  font-size: 5rem;
   color: hsl(var(--primary) / 0.3);
+}
+
+.leaderOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, hsl(var(--charcoal-deep) / 0.95), transparent);
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(0);
+  transition: transform var(--transition-base);
+}
+
+.leaderCard:hover .leaderOverlay {
+  transform: translateY(-4px);
+}
+
+.leaderInfo {
+  text-align: left;
 }
 
 .leaderName {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: hsl(var(--foreground));
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .leaderRole {
   font-family: var(--font-body);
   color: hsl(var(--primary));
   font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
 

@@ -2,19 +2,20 @@ import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
 import { Drama, Music, Paintbrush, BookOpen, Heart } from 'lucide-react';
 import styles from './Members.module.css';
+import vicePresidentImage from '@/assets/Vice-President.jpg';
 
 const leadership = [
   {
-    name: 'Abebe Tadesse',
+    name: 'Naftenan Matiwos',
     role: 'President',
     department: 'Theatre Arts',
     image: null,
   },
   {
-    name: 'Selam Mekonnen',
+    name: 'Mideksa Abraham',
     role: 'Vice President',
     department: 'Music',
-    image: null,
+    image: vicePresidentImage,
   },
   {
     name: 'Dawit Hailu',
@@ -127,18 +128,30 @@ const Members = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={styles.leaderCard}
               >
-                <div className={styles.leaderAvatar}>
-                  <div className={styles.leaderAvatarPlaceholder}>
-                    <span className={styles.leaderInitial}>
-                      {member.name.charAt(0)}
-                    </span>
+                <div className={styles.leaderImageWrapper}>
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className={styles.leaderImage}
+                    />
+                  ) : (
+                    <div className={styles.leaderImagePlaceholder}>
+                      <span className={styles.leaderInitial}>
+                        {member.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                  <div className={styles.leaderOverlay}>
+                    <div className={styles.leaderInfo}>
+                      <h3 className={styles.leaderName}>
+                        {member.name}
+                      </h3>
+                      <p className={styles.leaderRole}>{member.role}</p>
+                      <p className={styles.leaderDepartment}>{member.department}</p>
+                    </div>
                   </div>
                 </div>
-                <h3 className={styles.leaderName}>
-                  {member.name}
-                </h3>
-                <p className={styles.leaderRole}>{member.role}</p>
-                <p className={styles.leaderDepartment}>{member.department}</p>
               </motion.div>
             ))}
           </div>
